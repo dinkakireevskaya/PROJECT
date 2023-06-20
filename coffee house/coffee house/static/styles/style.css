@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+body {
+    font-family: Montserrat, serif;
+    background-color: white;
+    /* background: linear-gradient(90deg, #FFB773 0%, #5FBDCE 100%); */
+}
+
+p {
+    color: #101010;
+}
+.btn{
+	background-color: rgb(255, 255, 255);
+	color: #000;
+	border-color: rgb(255, 255, 255);
+}
+.btn:hover{
+	background-color: rgb(210, 105, 30);
+	border-color: rgb(210, 105, 30);
+}
+/* header */
+.buscet{
+	position: relative;
+	left: 830px;
+}
+.nav-link {
+    color: #8B4513;;
+}
+
+.navbar-nav .nav-link.active {
+    color: rgb(92, 92, 92);
+}
+
+.navbar-brand img {
+    width: 40px;
+}
+
+.navbar-toggler {
+    background-color: rgb(146, 149, 151);
+}
+
+
+/* Welcome */
+.welcome {
+    background-color: rgb(113, 113, 113);
+    font-size: 50px;
+    text-align: center;
+    padding-top: 2.5em;
+    padding-bottom: 3em;
+}
+
+.welcome-header {
+    letter-spacing: 5px;
+    color: white;
+}
+
+.welcome-title {
+    color: rgb(228, 228, 228);
+    margin-top: 1em;
+}
+
+.welcome-text {
+    color: rgb(195, 195, 195);
+    font-size: 0.4em;
+    padding: 0;
+    margin: 0;
+}
+
+/* design */
+.design {
+    background-color: rgb(237, 237, 237);
+    padding-bottom: 5em;
+}
+
+.design p {
+    color: #101010;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 2em;
+    letter-spacing: 5px;
+}
+
+/* Comand */
+.person {
+    background: linear-gradient(90deg, #FFB773 0%, #5FBDCE 100%);
+    margin: 0;
+}
+.comand {
+    color: #101010;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 2em;
+    letter-spacing: 5px;
+    padding-bottom: 2em;
+}
+
+.name{
+    padding-top: 5em;
+    letter-spacing: 4px;
+    text-align: center;
+    color: #7c3d10;
+    font-size: 2em;
+}
+
+.description {
+    color: #101010;
+}
+
+.sidebar {
+    background: linear-gradient(90deg, #FFB773 0%, #5FBDCE 100%);
+    color: #101010;
+    
+}
+
+.card {
+    background: linear-gradient(90deg, #FFB773 0%, #5FBDCE 100%);
+    color: #101010;
+    text-align: center;
+}
+
+.card_menu {
+    background-color: #7c3d1095;
+    color: #ececec;
+    text-align: center;
+}
+
+.card-text {
+    color: #ececec;
+    font-size: 2em;
+}
+.card a {
+    text-decoration: none;
+    color: #101010;
+}
+
+
+.bgfon {
+    background-color: rgba(214, 153, 78, 0.558);
+}
+
+.footer-text {
+    color: #101010;
+    margin:auto auto;
+}
+
+/*menu*/
+.menu {
+    background-color:rgba(214, 153, 78, 0.558);
+}
+
+/* map */
+.map {
+    background-color: rgb(222, 220, 220);
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.map-title {
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 2em;
+    padding-top: 2em;
+}
+
+.map-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-name {
+    color: #ca631a;
+    font-size: 1.5em;
+}
+
+.map-text {
+    font-size: 1.5em;
+    color: rgb(81, 81, 81);
+}
+
+footer,
+.btn-outline-primary {
+    background: linear-gradient(270deg, #FFB773 0%, #5FBDCE 100%); 
+}
+
+.media-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-anim {
+    animation: call 2s ease 0s infinite normal forwards;
+}
+
+@keyframes call {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
+@media(max-width:755px) {
+    .carousel-indicators {
+        display: none;
+    }
+}
+#popup {
+  display: table;
+  position: fixed; top: 0; left: 0;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255,0.5);
+  visibility: hidden;
+  animation: animaciya 1s 5s forwards; /* 5s - это количество секунд по истечении которых появляется сообщение */ 
+  cursor: pointer;
+}
+@keyframes animaciya {   
+  from {visibility: hidden;}  
+  to {visibility: visible;} 
+}
+#popup figure {
+  display: table-cell;
+  vertical-align: middle;
+}
+#popup div {
+  max-width: 600px; 
+  margin: 0 auto;
+  border-style: dashed;
+  border-color: rgb(139,69,19);
+}
+#popup h1{
+  color: rgb(139,69,19);
+  font-size: 22pt;
+}
+#popup h3{
+  color: rgb(0,0,0);
+  font-size: 13pt;
+}
+#popup button { 
+  position:relative;
+}
+.b1{
+  float: right;
+  color: rgb(237,212,182);
+  background: rgb(0,0,0);
+  width:25px;
+  height:23px;
+  font-size:10pt;
+}
+.b2{
+  color: rgb(237,212,182);
+  background: rgb(0,0,0);
+  width:200px;
+  height:40px;
+  font: 16pt caption;
+  text-transform: uppercase;
+}
+#popup div {
+  background: rgb(237,212,182);
+  padding: 1%;
+  cursor: default;
+}
+#popup div {
+  border-width: 8px 8px 8px 8px;
+  border-radius: 5px 5px 5px 5px;
+}
+#popup input {
+  width:350px;
+  height:40px;
+  background: rgb(196,196,196);
+  border-color: rgb(237,212,182);
+}
+::placeholder{
+  color: rgb(255,255,255);
+}
+
+
+
