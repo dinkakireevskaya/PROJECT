@@ -18,7 +18,6 @@ document.getElementById('popup').onclick = okno;
 function okno(e) {
   if (e.target.nodeName == 'BUTTON' || e.keyCode==27) { //
     document.getElementById('popup').style.display='none';
-    localStorage.setItem('popup1', 'none');
   }
 }
 // Не кликабельность кнопки при условии незаполненных форм
