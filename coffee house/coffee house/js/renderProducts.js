@@ -6,7 +6,7 @@ getProducts();
 // Асинхронная функция получения данных из файла products.json
 async function getProducts() {
 	
-    const response = await fetch('./js/products.json');
+    const response = await fetch('js/products.json');
     
     const productsArray = await response.json();
     
@@ -15,34 +15,25 @@ async function getProducts() {
 
 function renderProducts(productsArray) {
     productsArray.forEach(function (item) {
-        const productHTML = `<div class="col-md-6">
-						<div class="card mb-4" data-id="${item.id}">
-							<img class="product-img" src="img/roll/${item.imgSrc}" alt="">
-							<div class="card-body text-center">
-								<h4 class="item-title">${item.title}</h4>
-
-								<div class="details-wrapper">
-
-									<!-- Счетчик -->
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-									<!-- // Счетчик -->
-
-									<div class="price">
-										<div class="price__currency">${item.price} ₽</div>
-									</div>
-								</div>
-
-								<button data-cart type="button" class="btn btn-block btn-outline-warning">
-									+ в корзину
-								</button>
-
-							</div>
+        const productHTML = `<div class="col-lg-4 col-md-6 mt-4">
+                <div class="card_menu" data-id = "${item.id}">
+                  <a href="#"><img src="static/images/${item.imgSrc}" class="card-img-top" alt="${item.title}"></a>
+                  <div class="card-body">
+                    <h5 class="card-title">${item.title}</h5>
+                    <p class="card-text">
+                        ${item.price}p
+                    </p>
+					<div class="details-wrapper">
+						<div class="items counter-wrapper">
+							<div class="items__control" data-action="minus">-</div>
+							<div class="items__current" data-counter>1</div>
+							<div class="items__control" data-action="plus">+</div>
 						</div>
-					</div>`;
+						<button data-cart class="btn">Купить</button>
+					</div>
+                  </div>
+                </div>
+              </div>`;
         productsContainer.insertAdjacentHTML('beforeend', productHTML);
     });
 }
